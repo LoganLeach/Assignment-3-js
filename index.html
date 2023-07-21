@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pizza Order Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Pizza Order Form</h1>
+  <p id="studentInfo"></p>
+
+  <form id="pizzaForm">
+    <label for="pizzaSize">Select Pizza Size:</label>
+    <select name="pizzaSize" id="pizzaSize">
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+    </select>
+    <br>
+
+    <label for="toppings">Select Toppings (Control click to select more):</label>
+    <select name="toppings" id="toppings" multiple>
+      <option value="pepperoni">Pepperoni</option>
+      <option value="mushrooms">Mushrooms</option>
+      <option value="onions">Onions</option>
+      <option value="bellPeppers">Bell Peppers</option>
+      <option value="olives">Olives</option>
+      <option value="tomatoes">Tomatoes</option>
+    </select>
+    <br>
+
+    <label for="cheeseType">Select Cheese Type:</label>
+    <input type="radio" name="cheeseType" value="regular" checked> Regular
+    <input type="radio" name="cheeseType" value="extra"> Extra
+    <br>
+
+    <label for="delivery">Delivery Address:</label>
+    <textarea name="delivery" id="delivery" rows="4" cols="30" placeholder="Enter your address here"></textarea>
+    <br>
+
+    <input type="button" value="Order" onclick="createPizzaObject()">
+    <input type="reset" value="Reset">
+  </form>
+
+  <div id="orderSummary" style="display: none;">
+    <h2>Order Summary</h2>
+    <p id="summaryText"></p>
+  </div>
+
+  <script src="js/javascript.js" defer></script>
+</body>
+</html>
